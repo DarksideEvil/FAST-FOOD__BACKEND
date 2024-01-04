@@ -1,0 +1,1 @@
+This repository contains code and resources for a fast food ordering system. The system allows users to browse a menu of fast food items, add items to their cart, and place an order. The system also includes a backend for managing orders and inventory.
