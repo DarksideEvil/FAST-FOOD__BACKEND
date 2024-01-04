@@ -1,0 +1,20 @@
+{
+  "name": "fast-food",
+  "version": "1.0.0",
+  "description": "unrepeatable fast-food app's backend",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "sssss"
+  },
+  "keywords": [
+    "fast-food",
+    "food-app",
+    "food-backend"
+  ],
+  "author": "Behruz",
+  "license": "ISC"
+}
