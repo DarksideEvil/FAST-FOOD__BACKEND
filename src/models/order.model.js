@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-module.exports = mongoose.model('product', new mongoose.Schema({
+module.exports = mongoose.model('order', new mongoose.Schema({
     customer: {
       type: mongoose.Types.ObjectId,
       ref: 'customer',
@@ -16,17 +16,14 @@ module.exports = mongoose.model('product', new mongoose.Schema({
       },
       quantity: {
         type: Number,
-        trim: true,
         required: true
       },
       price: {
         type: Number,
-        trim: true,
         required: true
       },
       total: {
         type: Number,
-        trim: true,
         required: true
       }
     }],

@@ -4,9 +4,9 @@ const writeError = require('../settings/BUG/bug');
 const schema = yup.object({
     customer: yup.string().trim().required(),
     products: yup.array().required(),
-    subtotal: yup.number().trim().required(),
-    tax: yup.number().trim().required(),
-    total: yup.number().trim().required(),
+    subtotal: yup.number().required(),
+    tax: yup.number().required(),
+    total: yup.number().required(),
     shippingAddress: yup.object().required(),
     billingAddress: yup.object().required(),
     status: yup.string().min(2).max(20).lowercase().default('new').trim().required(),
