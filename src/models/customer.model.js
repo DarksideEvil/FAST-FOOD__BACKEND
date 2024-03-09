@@ -4,11 +4,11 @@ module.exports = mongoose.model('customer', new mongoose.Schema({
     fullname: {
         type: String,
         trim: true,
-        required: true
+        default: 'Unknown'
     },
     phone: {
         type: Number,
-        trim: true,
+        unique: true,
         // match: '^\+998([- ])?(90|91|93|94|95|98|99|33|97|71)([- ])?(\d{3})([- ])?(\d{2})([- ])?(\d{2})$',
         required: [true, 'Phone number required'],
     },
@@ -20,8 +20,8 @@ module.exports = mongoose.model('customer', new mongoose.Schema({
     address: {
         type: String,
         minlength: 2,
-        maxlength: 100,
-        required: true
+        maxlength: 200,
+        default: null
     },
     balance: {
         type: Number,
@@ -50,12 +50,6 @@ module.exports = mongoose.model('customer', new mongoose.Schema({
         type: String,
         minlength: 4,
         maxlength: 200,
-        // validate: {
-        //     validator: (pswd) => {
-        //       return /^(?=.*[A-Za-z])(?=.*\d)(?=.*[$@$!%*#?&])[A-Za-z\d$@$!%*#?&]{8,}$/.test(pswd);
-        //     },
-        //     message: props => `${props.value} is not a valid password!`
-        // },
         required: true
     }
 }, {timestamps: true, versionKey: false}));

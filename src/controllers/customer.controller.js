@@ -15,7 +15,8 @@ const getCustomer = async (req, res) => {
         return res.status(400).send('Such customer not found !');
     }
     try {
-        const customer = await Customer.findById(req.params.id);
+        const customer = await Customer.findById(req.params.id)
+        .select('-password');
         return res.status(200).json(customer);
     } catch (err) {writeError(err); res.status(400).send({message: err?.message});}
 }
